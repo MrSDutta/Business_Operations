@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VikFlow Ops Hub | Interactive Operations Tools & Calculators</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="VikFlow Ops Hub | Interactive Operations Tools & Calculators">
+    <meta name="description" content="Free tools that show service businesses exactly where they're losing leads and money. Built by VikFlow Operations.">
+    <meta name="keywords" content="operations tools, solar lead calculator, field service automation, revops calculators, workflow diagnostics, vikflow">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ops.vikflow.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ops.vikflow.com/">
+    <meta property="og:title" content="VikFlow Ops Hub | Interactive Operations Tools">
+    <meta property="og:description" content="Free tools that show service businesses exactly where they're losing leads and money.">
+    <meta property="og:image" content="https://vikflow.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ops.vikflow.com/">
+    <meta property="twitter:title" content="VikFlow Ops Hub | Interactive Operations Tools">
+    <meta property="twitter:description" content="Free tools that show service businesses exactly where they're losing leads and money.">
+    <meta property="twitter:image" content="https://vikflow.com/og-image.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "VikFlow Solar Lead Estimator",
+          "operatingSystem": "Web",
+          "applicationCategory": "BusinessApplication",
+          "url": "https://ops.vikflow.com/solar-calculator",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are VikFlow Ops Tools?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "VikFlow Ops Tools are lightweight, interactive web applications engineered to solve specific operational bottlenecks in sales, lead qualification, and dispatch for service businesses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are these calculators free to embed on our website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our interactive tools are free to test and use. We also build custom-branded, fully integrated versions for businesses looking to sync lead data directly into their CRM."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do these tools connect to our CRM?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each tool outputs clean JSON payloads via webhooks, connecting seamlessly to platforms like HubSpot, Salesforce, Jobber, Simpro, or custom n8n/Make scenarios."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="hub-container">
+    
+    <!-- BRAND HEADER -->
+    <div class="brand-header">
+        <a href="https://vikflow.com" class="brand-logo">
+            <svg class="logo-svg" viewBox="0 0 41 40" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <g id="logogram"><path d="M24 0H16V12.0632C15.9663 14.2434 14.1885 16 12.0005 16H0V24H8.68629C10.808 24 12.8429 23.1571 14.3431 21.6569L21.6569 14.3431C23.1571 12.8429 24 10.808 24 8.68629V0Z" fill="url(#paint0_linear)"/><path d="M16 40H24V27.9368C24.0337 25.7566 25.8115 24 27.9995 24H40V16H31.3137C29.192 16 27.1571 16.8429 25.6569 18.3431L18.3431 25.6569C16.8429 27.1571 16 29.192 16 31.3137V40Z" fill="url(#paint1_linear)"/></g>
+                <defs>
+                    <linearGradient id="paint0_linear" x1="20" y1="-0.997096" x2="20" y2="33.7931" gradientUnits="userSpaceOnUse"><stop stop-color="#FF582E"/><stop offset="1" stop-color="#0A85FF"/></linearGradient>
+                    <linearGradient id="paint1_linear" x1="20" y1="-0.997096" x2="20" y2="33.7931" gradientUnits="userSpaceOnUse"><stop stop-color="#FF582E"/><stop offset="1" stop-color="#0A85FF"/></linearGradient>
+                </defs>
+            </svg>
+            <span>VikFlow<span style="color: var(--brand);">.</span></span>
+        </a>
+        <div class="header-right">
+            <span class="brand-badge">Free Tools</span>
+            <a href="https://vikflow.com" class="back-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                vikflow.com
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-section">
+        <h1>Operations Tool Hub</h1>
+        <p class="subtitle">Free tools that show service businesses exactly where they're losing leads and money. Use them yourself, or let us integrate them into your workflow.</p>
+    </div>
+
+    <!-- SEARCH & CATEGORY FILTERS -->
+    <div class="controls-wrapper">
+        <div class="search-box">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search tools or industry..." onkeyup="filterTools()">
+        </div>
+
+        <div class="category-pills">
+            <button class="cat-btn active" onclick="setCategory('all', this)">All Tools</button>
+            <button class="cat-btn" onclick="setCategory('solar', this)">Solar</button>
+            <button class="cat-btn" onclick="setCategory('field-service', this)">Field Service</button>
+            <button class="cat-btn" onclick="setCategory('revops', this)">RevOps</button>
+        </div>
+    </div>
+
+    <!-- TOOL CARDS -->
+    <div class="tools-grid" id="toolsGrid">
+        
+        <!-- TOOL 1: SOLAR CALCULATOR (LIVE) -->
+        <a href="solar_calculator/solar_calculator.html" class="tool-card live" data-category="solar" data-keywords="solar lead calculator panel roof savings bill">
+            <div class="tool-card-main">
+                <div class="tool-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+                <div>
+                    <div class="badge-row">
+                        <span class="badge">Solar EPCs</span>
+                        <span class="status-live">
+                            <span class="live-dot"></span> Live
+                        </span>
+                    </div>
+                    <div class="tool-title">Low-Friction Lead Estimator</div>
+                    <p class="tool-desc">Embed on your site. Homeowners get instant solar estimates in 3 clicks — you get qualified leads with contact info, system size, and savings data pushed to your CRM.</p>
+                </div>
+            </div>
+            <div class="launch-btn">Launch Demo →</div>
+        </a>
+
+        <!-- TOOL 2: SPEED TO LEAD AUDIT (COMING SOON) -->
+        <div class="tool-card upcoming" data-category="field-service" data-keywords="speed to lead dispatch response time HVAC roofing">
+            <div class="tool-card-main">
+                <div class="tool-logo muted">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div>
+                    <div class="badge-row">
+                        <span class="badge muted">Field Services</span>
+                        <span class="status-upcoming">In Development</span>
+                    </div>
+                    <div class="tool-title">Speed-to-Lead Response Audit</div>
+                    <p class="tool-desc">Measures inbound dispatch delay and missed opportunity revenue for contractors. Input your response times, see what it costs you monthly.</p>
+                </div>
+            </div>
+            <div class="launch-btn muted">Notify Me →</div>
+        </div>
+
+        <!-- TOOL 3: CRM HANDOFF FRICTION (COMING SOON) -->
+        <div class="tool-card upcoming" data-category="revops" data-keywords="crm audit pipeline sales handoff hubspot salesforce">
+            <div class="tool-card-main">
+                <div class="tool-logo muted">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <div>
+                    <div class="badge-row">
+                        <span class="badge muted">RevOps</span>
+                        <span class="status-upcoming">In Development</span>
+                    </div>
+                    <div class="tool-title">Pipeline Handoff Friction Diagnostic</div>
+                    <p class="tool-desc">Identifies drop-off stages between lead signature and operational onboarding. See which handoff is losing you the most revenue.</p>
+                </div>
+            </div>
+            <div class="launch-btn muted">Notify Me →</div>
+        </div>
+
+    </div>
+
+    <div class="no-results" id="noResults">No tools match your search or filter criteria.</div>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Want this integrated into your workflow?</h2>
+            <p>These tools are free to demo. We also build custom-branded versions that plug directly into your CRM and capture leads automatically.</p>
+            <a href="mailto:souvik@vikflow.com" class="cta-btn">Talk to Souvik →</a>
+        </div>
+    </section>
+
+    <!-- SEO FAQ SECTION -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                What are VikFlow Ops Tools?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                VikFlow Ops Tools are lightweight, interactive web applications engineered to solve specific operational bottlenecks in sales, lead qualification, and dispatch for growing service businesses.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Are these calculators free to test and use?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Yes, our interactive tools are free to test online. We also build custom-branded, fully integrated versions for businesses looking to sync lead data directly into their CRM.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                How do these tools connect to our CRM?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Each tool outputs clean JSON payloads via webhooks, connecting seamlessly to platforms like HubSpot, Salesforce, Jobber, Simpro, or custom n8n/Make scenarios.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Can I white-label these for my business?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Yes. Every tool can be custom-branded with your logo, colors, and domain. Lead data flows directly into your systems — your customers never see VikFlow branding.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="hub-footer">
+        <div class="footer-left">
+            <svg viewBox="0 0 41 40" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <g><path d="M24 0H16V12.0632C15.9663 14.2434 14.1885 16 12.0005 16H0V24H8.68629C10.808 24 12.8429 23.1571 14.3431 21.6569L21.6569 14.3431C23.1571 12.8429 24 10.808 24 8.68629V0Z" fill="url(#pf0)"/><path d="M16 40H24V27.9368C24.0337 25.7566 25.8115 24 27.9995 24H40V16H31.3137C29.192 16 27.1571 16.8429 25.6569 18.3431L18.3431 25.6569C16.8429 27.1571 16 29.192 16 31.3137V40Z" fill="url(#pf1)"/></g>
+                <defs><linearGradient id="pf0" x1="20" y1="-1" x2="20" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#FF582E"/><stop offset="1" stop-color="#0A85FF"/></linearGradient><linearGradient id="pf1" x1="20" y1="-1" x2="20" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#FF582E"/><stop offset="1" stop-color="#0A85FF"/></linearGradient></defs>
+            </svg>
+            <span>Built by <a href="https://vikflow.com">VikFlow Operations</a></span>
+        </div>
+        <div class="footer-right">
+            <a href="mailto:souvik@vikflow.com">souvik@vikflow.com</a>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    let activeCategory = 'all';
+
+    function setCategory(category, element) {
+        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+        element.classList.add('active');
+        activeCategory = category;
+        filterTools();
+    }
+
+    function filterTools() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.tool-card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const matchesCat = (activeCategory === 'all' || card.dataset.category === activeCategory);
+            const matchesSearch = card.innerText.toLowerCase().includes(query) || card.dataset.keywords.toLowerCase().includes(query);
+
+            if (matchesCat && matchesSearch) {
+                card.style.display = 'flex';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    function toggleFaq(button) {
+        const item = button.parentElement;
+        item.classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
