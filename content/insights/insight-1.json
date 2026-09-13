@@ -1,0 +1,42 @@
+{
+  "title": "Before You Automate a Process, Find Out Why It Exists",
+  "slug": "before-you-automate-a-process-find-out-why-it-exists",
+  "type": "Insight",
+  "date": "2026-03-18",
+  "tags": [
+    "Process",
+    "Automation",
+    "Operations"
+  ],
+  "featured": true,
+  "order": 3,
+  "readTime": "5 min read",
+  "excerpt": "Processes in small businesses usually are not designed\u2014they grow. Before you remove steps, you need to know what job each one is actually doing.",
+  "sections": [
+    {
+      "heading": "The hidden function of a step",
+      "paragraphs": [
+        "A step can look repetitive and still be doing important work. An approval might be checking for duplicate charges, surfacing exceptions or giving another team visibility\u2014not simply approving a number."
+      ]
+    },
+    {
+      "heading": "Map before you automate",
+      "paragraphs": [
+        "Talk to the people who actually do the work. Ask what they check, what they send back, what happens in an exception and what information they need that is not obvious from the workflow itself."
+      ],
+      "image": "assets/media/automation-detail.svg",
+      "imageAlt": "Before and after view of mapping a process before automation"
+    },
+    {
+      "heading": "The principle",
+      "paragraphs": [
+        "The goal is not to preserve every step. The goal is to know what you are removing before you remove it. Map the process first. Understand what is really happening. Then decide what to automate."
+      ]
+    }
+  ],
+  "heroImage": "assets/media/automation-insight.svg",
+  "heroAlt": "Insight visual about mapping processes before automation",
+  "gallery": [
+    "assets/media/automation-detail.svg"
+  ]
+}

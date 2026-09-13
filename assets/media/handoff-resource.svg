@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#FAF7EF"/>
+<rect x="180" y="120" width="1240" height="760" rx="42" fill="#fff" stroke="#d8d2c6" stroke-width="3"/>
+<text x="270" y="245" fill="#0B1220" font-family="JetBrains Mono,monospace" font-size="28">FREE RESOURCE</text>
+<text x="270" y="390" fill="#0B1220" font-family="Fraunces,Georgia,serif" font-size="86">Project Handoff</text>
+<text x="270" y="485" fill="#0B1220" font-family="Fraunces,Georgia,serif" font-size="86" font-style="italic">Checklist</text>
+<rect x="270" y="570" width="360" height="90" rx="45" fill="#0B1220"/>
+<text x="345" y="628" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Get the resource →</text>
+<text x="270" y="755" fill="#596372" font-family="Inter,Arial,sans-serif" font-size="28">A practical starting point for cleaner handoffs.</text>
+</svg>

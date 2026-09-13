@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#0B1220"/>
+<circle cx="1250" cy="250" r="220" fill="#0A85FF" opacity="0.9"/>
+<circle cx="1080" cy="610" r="320" fill="#FF582E" opacity="0.8"/>
+<circle cx="430" cy="760" r="260" fill="#FAF7EF" opacity="0.14"/>
+<text x="120" y="190" fill="#FAF7EF" font-family="JetBrains Mono,monospace" font-size="28">INSIGHT / AUTOMATION</text>
+<text x="120" y="390" fill="#FAF7EF" font-family="Fraunces,Georgia,serif" font-size="88">Map first.</text>
+<text x="120" y="500" fill="#FAF7EF" font-family="Fraunces,Georgia,serif" font-size="88" font-style="italic">Automate second.</text>
+<text x="120" y="640" fill="#BFC7D4" font-family="Inter,Arial,sans-serif" font-size="32">Understand what each step is doing before you remove it.</text>
+</svg>

@@ -1,0 +1,47 @@
+{
+  "title": "Designing a Handoff That Does Not Depend on Memory",
+  "slug": "handoff-that-does-not-depend-on-memory",
+  "type": "Case Study",
+  "date": "2026-08-18",
+  "tags": [
+    "Process Design",
+    "Operations",
+    "Project Delivery"
+  ],
+  "featured": true,
+  "order": 2,
+  "excerpt": "How a sales-to-delivery handoff can be made explicit, checkable and useful before any automation is introduced.",
+  "sections": [
+    {
+      "heading": "Context",
+      "paragraphs": [
+        "The team was moving quickly, but delivery questions kept coming back to sales. The process appeared efficient from the outside because everyone knew the work; the hidden cost was repeated clarification."
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "paragraphs": [
+        "The root problem was not a lack of tools. It was that the handoff itself was undefined. There was no shared minimum information set and no clear point at which responsibility changed hands."
+      ]
+    },
+    {
+      "heading": "Approach",
+      "paragraphs": [
+        "First define the handoff, then define the data required to make it useful, then decide which parts are worth automating. The sequence matters."
+      ],
+      "image": "assets/media/process-map.svg",
+      "imageAlt": "Structured process map used to define the handoff"
+    },
+    {
+      "heading": "Outcome",
+      "paragraphs": [
+        "The resulting structure gives sales a clear completion point and engineering a predictable starting point. The process becomes easier to measure because the handoff is visible rather than implicit."
+      ]
+    }
+  ],
+  "heroImage": "assets/media/handoff-case-study.svg",
+  "heroAlt": "Case study visual showing context, diagnosis and outcome",
+  "gallery": [
+    "assets/media/handoff-case-study.svg"
+  ]
+}

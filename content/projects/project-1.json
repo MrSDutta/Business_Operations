@@ -1,0 +1,42 @@
+{
+  "title": "Sales \u2192 Engineering Handoff System",
+  "slug": "sales-engineering-handoff",
+  "type": "Project",
+  "date": "2026-08-24",
+  "tags": [
+    "Operations",
+    "Handoffs",
+    "Solar"
+  ],
+  "featured": true,
+  "order": 1,
+  "excerpt": "A structured handoff model for moving project-critical information from sales into engineering without relying on memory or repeated clarification.",
+  "hero": "",
+  "sections": [
+    {
+      "heading": "The problem",
+      "paragraphs": [
+        "Sales had context that engineering did not. Information lived across calls, messages, proposals and memory, so engineering often had to reconstruct the actual scope after a customer had already committed."
+      ]
+    },
+    {
+      "heading": "What changed",
+      "paragraphs": [
+        "The handoff was treated as a defined operational step rather than an informal email. Required information, ownership and exception handling were made explicit."
+      ],
+      "image": "assets/media/process-map.svg",
+      "imageAlt": "Process map showing sales, handoff, engineering and delivery"
+    },
+    {
+      "heading": "The principle",
+      "paragraphs": [
+        "Automation can accelerate a structured process. It cannot repair missing inputs, ambiguous ownership or an undefined handoff."
+      ]
+    }
+  ],
+  "heroImage": "assets/media/sales-handoff.svg",
+  "heroAlt": "Sales to engineering handoff diagram",
+  "gallery": [
+    "assets/media/process-map.svg"
+  ]
+}

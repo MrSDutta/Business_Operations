@@ -1,0 +1,19 @@
+{
+  "title": "Project Handoff Checklist",
+  "slug": "project-handoff-checklist",
+  "type": "Resource",
+  "date": "2026-09-01",
+  "tags": [
+    "Handoffs",
+    "Project Management",
+    "Operations"
+  ],
+  "featured": true,
+  "order": 4,
+  "excerpt": "A practical checklist for making a sales-to-delivery handoff explicit before work begins.",
+  "fileLabel": "Download checklist",
+  "heroImage": "assets/media/handoff-resource.svg",
+  "heroAlt": "Project handoff checklist resource cover",
+  "payhipUrl": "https://payhip.com/",
+  "ctaLabel": "Get the resource"
+}

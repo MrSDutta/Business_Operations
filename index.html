@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FAF7EF">
+<meta name="description" content="VikFlow Library — projects, case studies, insights and practical resources on operations, process design, systems and automation.">
+<link rel="canonical" href="https://projects.vikflow.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="VikFlow Library"><meta property="og:title" content="VikFlow Library"><meta property="og:description" content="Projects, case studies, insights and practical resources from VikFlow."><meta property="og:url" content="https://projects.vikflow.com/"><meta property="og:image" content="https://www.vikflow.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="VikFlow Library"><meta name="twitter:description" content="Projects, case studies, insights and practical resources from VikFlow."><meta name="twitter:image" content="https://www.vikflow.com/og-image.png">
+<link rel="icon" href="assets/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+<title>VikFlow Library — Projects, Insights & Resources</title>
+</head>
+<body>
+<header class="site-header" id="siteHeader"><div class="wrap bar"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="VikFlow"><span class="brand-word">VikFlow<span>.</span></span></a><nav class="nav" aria-label="Library filters"><a href="#all" data-filter-link="all">All</a><a href="#projects" data-filter-link="Project">Projects</a><a href="#case-studies" data-filter-link="Case Study">Case Studies</a><a href="#insights" data-filter-link="Insight">Insights</a><a href="#resources" data-filter-link="Resource">Resources</a></nav><div class="action"><a class="btn btn-light" href="https://www.vikflow.com/">← VikFlow</a><button class="btn btn-dark" data-help>Need help?</button></div><button class="menu" id="menuToggle" aria-label="Open menu">☰</button></div><div class="wrap mobile-nav" id="mobileNav"><a href="#all">All</a><a href="#projects">Projects</a><a href="#case-studies">Case Studies</a><a href="#insights">Insights</a><a href="#resources">Resources</a><a href="https://www.vikflow.com/">← VikFlow</a><button class="btn btn-dark" data-help>Need help? Talk to me</button></div></header>
+<main class="wrap">
+<section class="library-head"><div class="eyebrow">VikFlow / Library</div><h1>Work, thinking & <em style="font-style:italic;font-weight:300">useful things.</em></h1><p class="lead">A practical library of projects, case studies, insights and resources on how work moves through a business — and how to make it work better.</p><div class="filterbar" role="tablist"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="Project">Projects</button><button class="filter" data-filter="Case Study">Case Studies</button><button class="filter" data-filter="Insight">Insights</button><button class="filter" data-filter="Resource">Resources</button></div><input class="search" id="search" type="search" placeholder="Search the library…" aria-label="Search library"></section>
+<section class="grid" id="libraryGrid" aria-live="polite"></section>
+</main>
+<footer class="footer"><div class="wrap">VikFlow Library · An extension of <a href="https://www.vikflow.com/">vikflow.com</a></div></footer>
+<div class="modal-backdrop" id="helpModal"><div class="modal"><div class="eyebrow">Need help?</div><h2>Let's talk about the problem.</h2><p>Tell me what you're trying to improve, build or untangle.</p><form id="helpForm"><label>Name</label><input name="name" required><label>Email</label><input name="email" type="email" required><label>Message</label><textarea name="message" required></textarea><div class="modal-actions"><button type="button" class="btn btn-light" data-close>Close</button><button class="btn btn-dark">Send</button></div><div class="status" id="helpStatus"></div><div class="small-note">Set your form endpoint in <code>js/config.js</code> before launch.</div></form></div></div>
+
+<script src="js/config.js"></script><script src="js/library.js"></script><script src="js/main.js"></script>
+</body></html>
