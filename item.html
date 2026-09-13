@@ -1,168 +1,362 @@
-<script>
-(async () => {
-    const params = new URLSearchParams(location.search);
-    const type = params.get('type');
-    const slug = params.get('slug');
+<!doctype html>
+<html lang="en">
 
-    const map = {
-        'Project': 'content/projects/project-1.json',
-        'Case Study': 'content/case-studies/case-study-1.json',
-        'Insight': 'content/insights/insight-1.json',
-        'Resource': 'content/resources/resource-1.json'
-    };
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#FAF7EF">
+    <meta name="description" content="VikFlow Library item">
+    <link rel="icon" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>VikFlow Library</title>
+</head>
 
-    const detail = document.getElementById('detail');
+<body>
 
-    if (!type || !slug || !map[type]) {
-        detail.innerHTML = `
-            <div class="detail-shell">
-                <div class="eyebrow">404</div>
-                <h1>Not found.</h1>
-                <p class="lead">This Library item does not exist.</p>
+    <header class="site-header" id="siteHeader">
+        <div class="wrap bar">
+
+            <a class="brand" href="index.html">
+                <img src="assets/logo.svg" alt="VikFlow">
+                <span class="brand-word">VikFlow<span>.</span></span>
+            </a>
+
+            <div class="action">
+                <a class="btn btn-light" href="index.html">← Library</a>
+                <button class="btn btn-dark" data-help>Need help?</button>
             </div>
-        `;
-        return;
-    }
 
-    try {
-        const r = await fetch(map[type]);
+        </div>
+    </header>
 
-        if (!r.ok) {
-            throw new Error(`HTTP ${r.status}`);
-        }
+    <main class="wrap detail-page">
+        <div id="detail"></div>
+    </main>
 
-        const x = await r.json();
+    <footer class="footer">
+        <div class="wrap">
+            VikFlow Library · An extension of
+            <a href="https://www.vikflow.com/">vikflow.com</a>
+        </div>
+    </footer>
 
-        /*
-         * Make sure the requested slug matches the JSON being loaded.
-         * This prevents the wrong item from being displayed later.
-         */
-        if (x.slug && x.slug !== slug) {
-            throw new Error('Slug mismatch');
-        }
+    <div class="modal-backdrop" id="helpModal">
 
-        document.title = `${x.title} — VikFlow Library`;
+        <div class="modal">
 
-        const esc = (s) =>
-            String(s || '').replace(/[&<>"']/g, c => ({
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            }[c]));
+            <div class="eyebrow">Need help?</div>
 
-        const tags = (x.tags || [])
-            .map(t => `<span class="tag">${esc(t)}</span>`)
-            .join('');
+            <h2>Let's talk about the problem.</h2>
 
-        const hero = x.heroImage
-            ? `
-                <figure class="detail-hero">
-                    <img
-                        src="${esc(x.heroImage)}"
-                        alt="${esc(x.heroAlt || x.title)}"
-                    >
-                </figure>
-            `
-            : '';
+            <p>
+                Tell me what you're trying to improve, build or untangle.
+            </p>
 
-        const gallery = x.gallery && x.gallery.length
-            ? `
-                <div class="detail-gallery">
-                    ${x.gallery.map((src, i) => `
-                        <figure class="section-image">
-                            <img
-                                src="${esc(src)}"
-                                alt="${esc((x.title || '') + ' image ' + (i + 1))}"
-                                loading="lazy"
-                            >
-                        </figure>
-                    `).join('')}
-                </div>
-            `
-            : '';
+            <form id="helpForm">
 
-        let html = `
-            <article class="detail-shell">
-                <div class="eyebrow">
-                    ${esc(x.type)} · ${esc(x.date)}
-                    ${x.readTime ? ' · ' + esc(x.readTime) : ''}
+                <label>Name</label>
+                <input name="name" required>
+
+                <label>Email</label>
+                <input name="email" type="email" required>
+
+                <label>Message</label>
+                <textarea name="message" required></textarea>
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-light"
+                        data-close>
+                        Close
+                    </button>
+
+                    <button class="btn btn-dark">
+                        Send
+                    </button>
+
                 </div>
 
-                <h1>${esc(x.title)}</h1>
+                <div class="status" id="helpStatus"></div>
 
-                <p class="lead">${esc(x.excerpt)}</p>
+            </form>
 
-                ${hero}
+        </div>
 
-                <div class="tag-row">
-                    ${tags}
-                </div>
-        `;
+    </div>
 
-        if (x.sections) {
-            html += x.sections.map(s => `
-                <section class="section">
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
 
-                    ${s.image ? `
-                        <figure class="section-image">
-                            <img
-                                src="${esc(s.image)}"
-                                alt="${esc(s.imageAlt || s.heading)}"
-                                loading="lazy"
-                            >
-                        </figure>
-                    ` : ''}
+    <script>
+        (async () => {
 
-                    <h2>${esc(s.heading)}</h2>
+            const params = new URLSearchParams(location.search);
 
-                    ${(s.paragraphs || [])
-                        .map(p => `<p>${esc(p)}</p>`)
-                        .join('')}
-                </section>
-            `).join('');
-        }
+            const type = params.get('type');
+            const slug = params.get('slug');
 
-        html += gallery;
+            const files = {
+                'Project': 'content/projects/project-1.json',
+                'Case Study': 'content/case-studies/case-study-1.json',
+                'Insight': 'content/insights/insight-1.json',
+                'Resource': 'content/resources/resource-1.json'
+            };
 
-        if (x.type === 'Resource') {
-            html += `
-                <div class="download-panel">
-                    <div>
-                        <span class="mono-label">RESOURCE</span>
-                        <h3>${esc(x.title)}</h3>
-                        <p>Get the resource through Payhip.</p>
+            const detail = document.getElementById('detail');
+
+            if (!detail) {
+                console.error('Library detail container not found.');
+                return;
+            }
+
+            if (!type || !slug || !files[type]) {
+
+                detail.innerHTML = `
+                    <div class="detail-shell">
+                        <div class="eyebrow">404</div>
+                        <h1>Not found.</h1>
+                        <p class="lead">
+                            This Library item does not exist.
+                        </p>
                     </div>
+                `;
 
-                    <a
-                        class="btn btn-dark"
-                        href="${esc(x.payhipUrl || '#')}"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        ${esc(x.ctaLabel || 'Get the resource')}
-                    </a>
-                </div>
-            `;
-        }
+                return;
+            }
 
-        html += '</article>';
+            try {
 
-        detail.innerHTML = html;
+                const response = await fetch(files[type], {
+                    cache: 'no-store'
+                });
 
-    } catch (e) {
-        console.error('Could not load Library item:', e);
+                if (!response.ok) {
+                    throw new Error(
+                        `Could not load ${files[type]} — HTTP ${response.status}`
+                    );
+                }
 
-        detail.innerHTML = `
-            <div class="detail-shell">
-                <div class="eyebrow">Error</div>
-                <h1>Could not load this item.</h1>
-                <p class="lead">
-                    The Library item could not be loaded.
-                </p>
-            </div>
-        `;
-    }
-})();
-</script>
+                const item = await response.json();
+
+                if (item.slug && item.slug !== slug) {
+                    throw new Error(
+                        `Slug mismatch: requested "${slug}", found "${item.slug}"`
+                    );
+                }
+
+                document.title = `${item.title} — VikFlow Library`;
+
+                const esc = (value) => {
+                    return String(value || '').replace(
+                        /[&<>"']/g,
+                        char => ({
+                            '&': '&amp;',
+                            '<': '&lt;',
+                            '>': '&gt;',
+                            '"': '&quot;',
+                            "'": '&#039;'
+                        }[char])
+                    );
+                };
+
+                const tags = (item.tags || [])
+                    .map(tag => `
+                        <span class="tag">
+                            ${esc(tag)}
+                        </span>
+                    `)
+                    .join('');
+
+                const hero = item.heroImage
+                    ? `
+                        <figure class="detail-hero">
+                            <img
+                                src="${esc(item.heroImage)}"
+                                alt="${esc(item.heroAlt || item.title)}"
+                            >
+                        </figure>
+                    `
+                    : '';
+
+                let html = `
+                    <article class="detail-shell">
+
+                        <div class="eyebrow">
+                            ${esc(item.type)}
+                            ·
+                            ${esc(item.date)}
+                            ${item.readTime
+                                ? ` · ${esc(item.readTime)}`
+                                : ''
+                            }
+                        </div>
+
+                        <h1>
+                            ${esc(item.title)}
+                        </h1>
+
+                        <p class="lead">
+                            ${esc(item.excerpt)}
+                        </p>
+
+                        ${hero}
+
+                        <div class="tag-row">
+                            ${tags}
+                        </div>
+                `;
+
+                if (Array.isArray(item.sections)) {
+
+                    html += item.sections
+                        .map(section => {
+
+                            const sectionImage = section.image
+                                ? `
+                                    <figure class="section-image">
+                                        <img
+                                            src="${esc(section.image)}"
+                                            alt="${esc(
+                                                section.imageAlt ||
+                                                section.heading ||
+                                                item.title
+                                            )}"
+                                            loading="lazy"
+                                        >
+                                    </figure>
+                                `
+                                : '';
+
+                            const paragraphs = Array.isArray(
+                                section.paragraphs
+                            )
+                                ? section.paragraphs
+                                    .map(
+                                        paragraph =>
+                                            `<p>${esc(paragraph)}</p>`
+                                    )
+                                    .join('')
+                                : '';
+
+                            return `
+                                <section class="section">
+
+                                    ${sectionImage}
+
+                                    <h2>
+                                        ${esc(section.heading)}
+                                    </h2>
+
+                                    ${paragraphs}
+
+                                </section>
+                            `;
+                        })
+                        .join('');
+                }
+
+                if (Array.isArray(item.gallery) && item.gallery.length) {
+
+                    html += `
+                        <div class="detail-gallery">
+
+                            ${item.gallery.map((src, index) => `
+                                <figure class="section-image">
+
+                                    <img
+                                        src="${esc(src)}"
+                                        alt="${esc(
+                                            item.title +
+                                            ' image ' +
+                                            (index + 1)
+                                        )}"
+                                        loading="lazy"
+                                    >
+
+                                </figure>
+                            `).join('')}
+
+                        </div>
+                    `;
+                }
+
+                if (item.type === 'Resource') {
+
+                    html += `
+                        <div class="download-panel">
+
+                            <div>
+
+                                <span class="mono-label">
+                                    RESOURCE
+                                </span>
+
+                                <h3>
+                                    ${esc(item.title)}
+                                </h3>
+
+                                <p>
+                                    Get the resource through Payhip.
+                                </p>
+
+                            </div>
+
+                            <a
+                                class="btn btn-dark"
+                                href="${esc(item.payhipUrl || '#')}"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                ${esc(
+                                    item.ctaLabel ||
+                                    'Get the resource'
+                                )}
+                            </a>
+
+                        </div>
+                    `;
+                }
+
+                html += `
+                    </article>
+                `;
+
+                detail.innerHTML = html;
+
+            } catch (error) {
+
+                console.error(
+                    'Could not load Library item:',
+                    error
+                );
+
+                detail.innerHTML = `
+                    <div class="detail-shell">
+
+                        <div class="eyebrow">
+                            Error
+                        </div>
+
+                        <h1>
+                            Could not load this item.
+                        </h1>
+
+                        <p class="lead">
+                            ${esc(
+                                error.message ||
+                                'The Library item could not be loaded.'
+                            )}
+                        </p>
+
+                    </div>
+                `;
+            }
+
+        })();
+    </script>
+
+</body>
+
+</html>
